@@ -204,11 +204,11 @@ a {
 .build-sec {
   padding: 100px 0;
   background: linear-gradient(
-    180deg,
-    rgba(207, 198, 211, 0.32) 0%,
-    rgba(207, 198, 211, 0.87) 37%,
-    rgba(207, 198, 211, 0.51) 59%,
-    rgba(207, 198, 211, 0.52) 100%
+    to right,
+    rgba(207, 206, 198, 0.32) 0%,
+    rgba(207, 206, 198, 0.2784) 37%,
+    rgba(207, 206, 198, 0.1632) 59%,
+    rgba(207, 206, 198, 0.1664) 100%
   );
 }
 .build-container {
@@ -290,23 +290,18 @@ a {
 }
 
 .swiper-slide {
- 
 }
 
 .swiper-slide img {
-
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-
 .swiper {
   width: 100%;
   height: 300px;
   margin: auto;
-  
 }
 
 .swiper-slide {
@@ -397,6 +392,17 @@ a {
   .build-sec {
     padding: 70px 0;
   }
+  /* Testimonial Section */
+  .testi-sec {
+    padding: 70px 0 60px;
+  }
+  .hdr-top {
+    font-size: 12px;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border: 1px solid #efeeed;
+    border-radius: 47px;
+  }
 }
 @media screen and (max-width: 768px) {
   .title1 {
@@ -446,6 +452,17 @@ a {
   .card-pink > .see-more > a {
     font-size: 14px;
   }
+  /* Testimonial Section */
+  .testi-sec {
+    padding: 50px;
+  }
+  .hdr-top {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  .testihdr > .title2 {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 576px) {
   .title1 {
@@ -482,14 +499,14 @@ a {
 
   /* About Section */
   .about-sec {
-    padding: 40px 0;
+    padding: 30px 0 50px;
   }
   .about-hdr {
     margin-top: 18px;
   }
   .about-left-img {
     max-width: 475px;
-    margin: 40px auto 30px;
+    margin: 30px auto 30px;
   }
   .about-right-img {
     margin: 0 auto;
@@ -501,17 +518,20 @@ a {
     line-height: 18px;
   }
   .about-desc {
-    margin-block: 30px 20px;
+    margin-block: 20px;
     font-size: 14px;
     line-height: 22px;
+  }
+  .about-btn {
+    margin-bottom: 30px;
   }
   .about-btn > .btn-secondary {
     padding: 10px 28px;
     font-size: 12px;
   }
   /* Build Section */
-  .about-sec {
-    padding: 40px 0 20px;
+  .build-sec {
+    padding: 40px 0;
   }
   .card {
     height: 226px;
@@ -523,5 +543,16 @@ a {
     font-size: 12px;
     margin-block: 15px 25px;
     line-height: 22px;
+  }
+  /* Testimonial Section */
+  .testi-sec {
+    padding: 40px;
+  }
+  .hdr-top {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .testihdr > .title2 {
+    margin-top: 16px;
   }
 }
