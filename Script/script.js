@@ -10,6 +10,22 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
+    prevArrow: `
+      <button class="slick-prev custom-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"/>
+        </svg>
+      </button>
+    `,
+    nextArrow: `
+      <button class="slick-next custom-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M9 6L15 12L9 18" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"/>
+        </svg>
+      </button>
+    `,
     responsive: [
       {
         breakpoint: 768,

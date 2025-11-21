@@ -359,6 +359,76 @@ a {
   font-weight: 500;
   color: #666666;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  content: none !important;
+}
+
+.custom-arrow {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #a06cc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 20;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.custom-arrow svg path {
+  stroke: #fff !important;
+}
+
+.slick-prev.custom-arrow,
+.slick-next.custom-arrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.custom-arrow:hover {
+  background: #fff;
+  box-shadow: 0 0 14px 12px #c4c4c4;
+}
+
+.custom-arrow:hover svg path {
+  stroke: #a06cc4 !important;
+}
+
+.slick-animating .custom-arrow svg path {
+  stroke: #fff !important;
+}
+
+.custom-arrow:active {
+  background: #a06cc4 !important;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.custom-arrow:active svg path {
+  stroke: #fff !important;
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.custom-arrow:focus {
+  outline: none !important;
+  color: #a06cc4;
+}
+
+.slick-prev {
+  left: -100px;
+}
+
+.slick-next {
+  right: -100px;
+}
 /* Get in touch Section */
 .touch-box {
   max-width: 945px;
