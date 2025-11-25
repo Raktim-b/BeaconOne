@@ -7,8 +7,8 @@ $(document).ready(function () {
     centerPadding: "0",
     asNavFor: ".testimonial-cntn-slider",
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
+    // autoplay: true,
+    // autoplaySpeed: 1500,
     pauseOnHover: true,
     prevArrow: `
       <button class="slick-prev custom-arrow">

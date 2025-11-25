@@ -86,9 +86,10 @@ a {
 .nav-logo {
   position: absolute;
   top: -14px;
+  left: 67px;
 }
 .navbar-brand {
-  width: 224px;
+  max-width: 224px;
 }
 .navbar-brand > img {
   width: 100%;
@@ -137,6 +138,7 @@ a {
   border-radius: 20px;
   text-align: center;
   padding: 100px 0 0;
+  background-attachment: fixed;
 }
 .banner-wrpr .title1 {
   max-width: 984px;
@@ -309,7 +311,7 @@ a {
 }
 
 .testimonial-img-slick {
-  max-width: 595px;
+  max-width: 578.7px;
   margin: 0 auto;
 }
 
@@ -375,51 +377,29 @@ a {
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 }
-
-.custom-arrow svg path {
-  stroke: #fff !important;
+.slick-prev {
+  background-color: var(--tertiary-color);
 }
-
-.slick-prev.custom-arrow,
-.slick-next.custom-arrow {
-  opacity: 1 !important;
-  visibility: visible !important;
+.slick-prev path {
+  stroke: #c4c4c4 !important;
+}
+.custom-arrow svg path {
+  stroke: #fff;
 }
 
 .custom-arrow:hover {
-  background: #fff;
   box-shadow: 0 0 14px 12px #c4c4c4;
 }
-
-.custom-arrow:hover svg path {
-  stroke: #a06cc4 !important;
-}
-
 .slick-animating .custom-arrow svg path {
   stroke: #fff !important;
 }
 
-.custom-arrow:active {
-  background: #a06cc4 !important;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.custom-arrow:active svg path {
-  stroke: #fff !important;
-}
-
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-.custom-arrow:focus {
-  outline: none !important;
-  color: #a06cc4;
+.slick-next:hover,
+.slick-next:focus {
+  background: #a06cc4;
 }
 
 .slick-prev {
@@ -478,9 +458,12 @@ a {
   max-width: 1428px;
 }
 .ftr-logo {
-  width: 195.12px;
+  max-width: 195.12px;
 }
-.ftr-logo > img {
+.ftr-logo > a {
+  width: 100%;
+}
+.ftr-logo > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -636,6 +619,10 @@ a {
     font-size: 25px;
     line-height: 22px;
   }
+  /* Navbar Sectiob */
+  .nav-logo {
+    left: 26px;
+  }
   /* Banner Section */
   .banner-sec {
     padding: 0 15px;
@@ -697,9 +684,7 @@ a {
   .ftr-sec {
     padding-block: 90px 14px;
   }
-  .ftr-logo {
-    width: 140.12px;
-  }
+
   .ftr-hdr {
     font-size: 17px;
     margin-bottom: 38px;
@@ -806,7 +791,9 @@ a {
     font-size: 14px;
   }
   /* Footer Section */
-
+  .ftr-sec {
+    padding: 110px 0 14px;
+  }
   .ftr-top {
     padding-bottom: 30px;
   }
@@ -868,14 +855,14 @@ a {
   /* Navbar Section */
   .nav-logo {
     position: absolute;
-    top: -7px;
+    top: 0px;
   }
   .navbar-brand {
-    width: 160px;
+    max-width: 180px;
   }
   /* Banner Section */
   .banner-wrpr {
-    padding: 60px 0 0;
+    padding: 85px 0 0;
   }
   .banner-wrpr p {
     font-size: 12px;
