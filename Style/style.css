@@ -709,6 +709,9 @@ a {
   }
 }
 @media screen and (max-width: 992px) {
+  .cursor {
+    display: none;
+  }
   /* Navbar Section */
   .offcanvas {
     flex-direction: column;
