@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  AOS.init();
+  luxy.init({
+    wrapper: "#luxy",
+    targets: ".luxy-el",
+    wrapperSpeed: 0.08,
+  });
   $(".testimonial-img-slick").slick({
     dots: false,
     slidesToShow: 5,
@@ -7,8 +13,8 @@ $(document).ready(function () {
     centerPadding: "0",
     asNavFor: ".testimonial-cntn-slider",
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 1500,
+    autoplay: true,
+    autoplaySpeed: 1500,
     pauseOnHover: true,
     prevArrow: `
       <button class="slick-prev custom-arrow">
@@ -71,4 +77,45 @@ $(document).ready(function () {
       $(this).find(".slick-center").prev().addClass("sl-prev");
     }
   );
+  const $cursor = $(".cursor");
+  let mouseX = 0;
+  let mouseY = 0;
+  let clientX = 0;
+  let clientY = 0;
+
+  $(document).on("mousemove", function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function MouseMove() {
+    clientX += (mouseX - clientX) * 0.05;
+    clientY += (mouseY - clientY) * 0.05;
+
+    $cursor.css({
+      top: clientY + "px",
+      left: clientX + "px",
+    });
+
+    requestAnimationFrame(MouseMove);
+  }
+
+  MouseMove();
+
+  // AOS refresh
+  AOS.refresh();
+});
+$(window).on("load", function () {
+  const $loader = $(".loading-box");
+  const $content = $(".page-wrpr");
+
+  // Keep loader for at least 3 seconds
+  setTimeout(() => {
+    $loader.addClass("fade-out");
+
+    setTimeout(() => {
+      $loader.hide();
+      $content.removeClass("hidden").addClass("show");
+    }, 500); // wait for fade-out transition
+  }, 3000);
 });

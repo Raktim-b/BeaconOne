@@ -41,6 +41,74 @@ a {
 .btn-primary:hover {
   background-color: #d5d3d5;
 }
+/* Loading Screen */
+/* From Uiverse.io by TemRevil */
+.loading-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff; /* choose any color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  gap: 10px;
+  transition: opacity 0.5s ease;
+}
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.WH {
+  width: 20px;
+  height: 70px;
+}
+.color {
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+}
+.animation {
+  animation: Loading 1s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+@keyframes Loading {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 70px;
+  }
+  50% {
+    height: 70px;
+    transform: rotate(-10deg);
+  }
+  75% {
+    height: 70px;
+    transform: rotate(10deg);
+  }
+  100% {
+    height: 0;
+  }
+}
+.cursor {
+  mix-blend-mode: difference;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  position: fixed;
+  z-index: 9999;
+}
 .title1 {
   color: var(--primary-color);
   font-weight: 500;
